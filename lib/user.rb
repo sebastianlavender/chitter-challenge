@@ -7,6 +7,8 @@ class User
   property :username, String
   property :password, String
 
+  has n, :peeps
+
 end
 
 DataMapper.finalize
