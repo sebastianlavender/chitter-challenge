@@ -13,7 +13,7 @@
 <ul>
   <% @peeps.reverse.each do |peep| %>
     <h6>
-        <%= peep.message %>
+        <%= "#{peep.message} created at #{peep.created_at.strftime("%F %T")}" %>
     </h6>
   <% end %>
 </ul>

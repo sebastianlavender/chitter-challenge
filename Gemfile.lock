@@ -130,6 +130,7 @@ GEM
       tilt (~> 2.0)
     stringex (1.5.1)
     tilt (2.0.9)
+    timecop (0.9.1)
     unicode-display_width (1.4.1)
     uuidtools (2.1.5)
     xpath (3.2.0)
@@ -142,6 +143,7 @@ DEPENDENCIES
   capybara
   data_mapper
   dm-postgres-adapter
+  dm-timestamps
   pg
   rake
   rb-readline
@@ -150,6 +152,7 @@ DEPENDENCIES
   simplecov
   simplecov-console
   sinatra
+  timecop
 
 RUBY VERSION
    ruby 2.6.0p0
