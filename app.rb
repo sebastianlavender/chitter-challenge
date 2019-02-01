@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/peep'
+require './lib/user'
 require_relative 'database_helper'
 
 database_setup
@@ -21,6 +22,13 @@ class Chitter < Sinatra::Base
   end
 
   post '/credentials' do
-    redirect('/')
+    user = User.create(username: params[:username], password: params[:password])
+    redirect("/homepage/#{user.id}")
+  end
+
+  get '/homepage/:id' do
+    @peeps = Peep.all
+    @user = User.get(params[:id])
+    erb(:homepage)
   end
 end
