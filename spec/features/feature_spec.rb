@@ -31,3 +31,13 @@ feature 'add peep' do
     expect(page).to have_content("#{Time.now.strftime("%F %T")}")
   end
 end
+
+feature 'sign up' do
+  scenario 'As a user I want to sign up to chitter' do
+    visit('/')
+    click_button('Sign up')
+    fill_in('username', with: 'test_user')
+    fill_in('password', with: 'password')
+    expect(page).to have_content('test_user signed in')
+  end
+end
