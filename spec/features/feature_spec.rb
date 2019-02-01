@@ -38,6 +38,7 @@ feature 'sign up' do
     click_button('Sign up')
     fill_in('username', with: 'test_user')
     fill_in('password', with: 'password')
+    click_button('Submit')
     expect(page).to have_content('test_user signed in')
   end
 end

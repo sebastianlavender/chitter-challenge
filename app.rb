@@ -15,4 +15,12 @@ class Chitter < Sinatra::Base
     Peep.create(message: params[:message])
     redirect('/')
   end
+
+  get '/signup' do
+    erb(:signup)
+  end
+
+  post '/credentials' do
+    redirect('/')
+  end
 end
